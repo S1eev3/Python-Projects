@@ -125,28 +125,6 @@ def reset(nice,mean,name):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     start()
 
