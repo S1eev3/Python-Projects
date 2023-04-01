@@ -85,7 +85,7 @@ def win(nice,mean,name):
     #Substitute the {} wildcards with our variable values
     print("\nNice job {}, you win! \n Everyone loves you and you've \nmade lots of friends along the way!".format(name))
     # For playing win game sound
-    playsound('C:/Users/mitch/Documents/GitHub/Python-Projects/NiceMeanGame/media/winGame.mp3')
+    playsound('./media/winGame.mp3')
     # call again function and pass in our variables
     again(nice,mean,name)
 
@@ -93,6 +93,8 @@ def win(nice,mean,name):
 def lose(nice,mean,name):
     #Substitute the {} wildcards with our variable values
     print("\nAhhh too bad, game over! \n{}, you live in a dirty beat-up \nvan by the river, wretched and alone!".format(name))
+    # For playing win game sound
+    playsound('./media/BooVoiceClip.mp3')
     # call again function and pass in our variables
     again(nice,mean,name)
 
