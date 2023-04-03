@@ -24,7 +24,7 @@ class User:
 
 
 
-
+# Faculty and Student child class definitions
 class Faculty(User):
     tenure = True
     department = 'Humanities'
