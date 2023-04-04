@@ -37,8 +37,6 @@ class Customer(User):
 
 
 
-
-
             
 # Outside of the class you would create an instance of the User class
 new_user = User()
