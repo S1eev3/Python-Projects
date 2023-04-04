@@ -32,9 +32,9 @@ class Faculty(User):
 
     # Define polymorphed login method of child class
     def login(self):
-        entry_email = input("Enter your email: ")
         entry_id = input("Enter your Faculty ID: ")
-        if (entry_email == self.email and entry_id == self.faculty_id):
+        entry_password = input("Enter your Password: ")
+        if (entry_id == self.faculty_id and entry_password == self.password):
             print("Welcome back, {}".format(self.name))
         else:
             print("You are not authorized for this page.")
@@ -57,9 +57,9 @@ class Student(User):
 
     # Define polymorphed login method of child class
     def login(self):
-        entry_email = input("Enter your email: ")
         entry_id = input("Enter your Student ID: ")
-        if (entry_email == self.email and entry_id == self.student_id):
+        entry_password = input("Enter your password: ")
+        if (entry_id == self.student_id and entry_password == self.password):
             print("Welcome back, {}".format(self.name))
         else:
             print("You are not authorized for this page.")
