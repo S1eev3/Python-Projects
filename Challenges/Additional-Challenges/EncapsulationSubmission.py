@@ -4,7 +4,7 @@
 
 class Protected:
     def __init__(self):
-        self.__privateVar = 12
+        self.__privateVar = 25
 
     def getPrivate(self):
         print(self.__privateVar)
@@ -15,5 +15,5 @@ class Protected:
 
 obj = Protected()
 obj.getPrivate()
-obj.setPrivate(23)
+obj.setPrivate(50)
 obj.getPrivate()
