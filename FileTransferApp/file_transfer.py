@@ -3,6 +3,8 @@ from tkinter import *
 import tkinter.filedialog
 import os
 import shutil
+import datetime
+from datetime import *
 
 
 class ParentWindow(Frame):
@@ -70,11 +72,18 @@ class ParentWindow(Frame):
         source_files = os.listdir(source)
         # Runs through each file in the source directory
         for i in source_files:
-            # moves each files from the source to the destination
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
-
-
+            # Retrieves modification times for all files in source folder
+            mod_time = datetime.fromtimestamp(os.path.getmtime('C:/Python_Projects/Customer Source/' + i))
+            # Retrieves current local time
+            local_time = datetime.now()
+            # Sets mod_limit variable by deducting 1 day from mod_time
+            mod_limit = mod_time + timedelta(days=1)
+            # Compares mod_limit to local_time to determine if it was modified with 24 hours
+            if mod_limit > local_time:
+                # moves each file modified within 24 hours from source to destination folder
+                shutil.move(source + '/' + i, destination)
+                print(i + ' was successfully transferred.')
+                
 
 
     # Creates function to exit program
