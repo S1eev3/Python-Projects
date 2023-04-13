@@ -74,6 +74,9 @@ class ParentWindow(Frame):
             shutil.move(source + '/' + i, destination)
             print(i + ' was successfully transferred.')
 
+
+
+
     # Creates function to exit program
     def exit_program(self):
         # root is the main GUI window, the Tkinter destroy method
