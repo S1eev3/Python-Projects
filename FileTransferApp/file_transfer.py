@@ -72,8 +72,10 @@ class ParentWindow(Frame):
         source_files = os.listdir(source)
         # Runs through each file in the source directory
         for i in source_files:
+            # Creating correct file name and path necessary for our loop to iterate through directory
+            file_path = os.path.join(source, i)
             # Retrieves modification times for all files in source folder
-            mod_time = datetime.fromtimestamp(os.path.getmtime('C:/Python_Projects/Customer Source/' + i))
+            mod_time = datetime.fromtimestamp(os.path.getmtime(file_path))
             # Retrieves current local time
             local_time = datetime.now()
             # Sets mod_limit variable by deducting 1 day from mod_time
